@@ -1,0 +1,11 @@
+languageCode = 'en-us'
+title = "Tutorial Tree"
+theme = 'hugo-theme-relearn'
+
+[module]
+  [module.hugoVersion]
+    min = "0.121.0"
+
+[author]
+  name = "Sk Azaruddin"
+  homepage = "https://github.com/skazaruddin"

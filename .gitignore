@@ -1,0 +1,34 @@
+# Ignore compiled files
+/public/
+/resources/
+
+# Ignore cache and temporary files
+/resources/_gen/
+/resources/_template_data/
+/resources/_gen/*
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Hugo files that can be generated
+/resources/_cache/*
+
+# Ignore Hugo configuration files that may contain sensitive information
+/config.toml
+/config.yaml
+/config.json
+
+# Ignore local development server files
+.env
+
+# Ignore Hugo logs
+*.log
+
+# Ignore Hugo cache
+.hugo_cache/
+
+# Ignore Netlify build directory
+/netlify/
+
+# Ignore OS-specific files
+Thumbs.db
