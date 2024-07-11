@@ -1,8 +1,9 @@
 +++
-categories = "blogs"
-disableToc = false
+categories = "html"
+disableToc = true
 title = "Content Security Policy in Web Browsers"
-weight = 4
+weight = 20
+
 +++
 
 
@@ -13,27 +14,27 @@ Here are the key components and concepts of CSP:
 1. **Policy Definition**: The CSP is defined using the `Content-Security-Policy` HTTP header or a `<meta>` tag in the HTML document. The policy consists of one or more directives that specify the allowed sources for different types of content.
 
 2. **Directives**: Each directive controls a specific type of resource or behavior. Common directives include:
-   - `default-src`: Serves as a fallback for other resource types when no other directives are defined.
-   - `script-src`: Specifies valid sources for JavaScript.
-   - `style-src`: Specifies valid sources for stylesheets.
-   - `img-src`: Specifies valid sources for images.
-   - `connect-src`: Specifies valid sources for network requests (e.g., AJAX, WebSockets).
-   - `font-src`: Specifies valid sources for fonts.
-   - `object-src`: Specifies valid sources for plugins like Flash.
-   - `media-src`: Specifies valid sources for media files (e.g., audio, video).
-   - `frame-ancestors`: Locations from which this web page can be loaded using a frame, iframe, object, embed, or applet element.Basically, this directive allows you to specify what parent source may embed a page.
-   - `frame-src`: Specifies valid sources for nested browsing contexts (e.g., iframes).i.e. allows you to specify where iframes in a page may be loaded from. Note: frame-ancestors allows you to specify what parent source may embed a page. This differs from frame-src, which allows you to specify where iframes in a page may be loaded from.
-   - `form-action`: URLs that can be used as part of an action in a <form> tag, meaning the browser restricts where form results can be sent. The form action does not revert to default-src, so this is a mandatory property if you are using form elements on your site.
-   - `plugin-types`: the set of plugins that can be invoked via objects, embeds, or applets, defined using MIME types.
-   - `base-uri`: Allows URLs in the src attribute of any tag.
+    - `default-src`: Serves as a fallback for other resource types when no other directives are defined.
+    - `script-src`: Specifies valid sources for JavaScript.
+    - `style-src`: Specifies valid sources for stylesheets.
+    - `img-src`: Specifies valid sources for images.
+    - `connect-src`: Specifies valid sources for network requests (e.g., AJAX, WebSockets).
+    - `font-src`: Specifies valid sources for fonts.
+    - `object-src`: Specifies valid sources for plugins like Flash.
+    - `media-src`: Specifies valid sources for media files (e.g., audio, video).
+    - `frame-ancestors`: Locations from which this web page can be loaded using a frame, iframe, object, embed, or applet element.Basically, this directive allows you to specify what parent source may embed a page.
+    - `frame-src`: Specifies valid sources for nested browsing contexts (e.g., iframes).i.e. allows you to specify where iframes in a page may be loaded from. Note: frame-ancestors allows you to specify what parent source may embed a page. This differs from frame-src, which allows you to specify where iframes in a page may be loaded from.
+    - `form-action`: URLs that can be used as part of an action in a <form> tag, meaning the browser restricts where form results can be sent. The form action does not revert to default-src, so this is a mandatory property if you are using form elements on your site.
+    - `plugin-types`: the set of plugins that can be invoked via objects, embeds, or applets, defined using MIME types.
+    - `base-uri`: Allows URLs in the src attribute of any tag.
 
 
 3. **Source Values**: Each directive can have multiple source values that determine where the content can be loaded from. Source values include:
-   - `'self'`: Allows content from the same origin as the page.
-   - `'none'`: Disallows all content of the specified type.
-   - `'unsafe-inline'`: Allows inline resources like `<style>` and `<script>`. Use with caution as it weakens the policy.
-   - `'unsafe-eval'`: Allows the use of `eval()` and similar methods. Use with caution as it weakens the policy.
-   - Specific URLs or URL patterns: Allows content from specified domains or subdomains.
+    - `'self'`: Allows content from the same origin as the page.
+    - `'none'`: Disallows all content of the specified type.
+    - `'unsafe-inline'`: Allows inline resources like `<style>` and `<script>`. Use with caution as it weakens the policy.
+    - `'unsafe-eval'`: Allows the use of `eval()` and similar methods. Use with caution as it weakens the policy.
+    - Specific URLs or URL patterns: Allows content from specified domains or subdomains.
 
 4. **Example CSP Header**:
    ```http
@@ -103,7 +104,6 @@ In this example, the CSP does not include 'unsafe-inline' in the style-src direc
 
 The following screenshot demonstrates the effect of removing `'unsafe-inline'` from the `style-src` directive. As expected, the inline styles are not applied.
 
-**Preview** `images/html/csp-in-browsers/csp-error.png`:
+**Preview** `csp-error.png`:
 
-![CSP Test Screenshot](/images/html/csp-in-browsers/csp-error.png)
-
+![CSP Test](csp-error.png)

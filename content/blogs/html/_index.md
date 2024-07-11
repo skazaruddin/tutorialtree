@@ -1,6 +1,7 @@
 +++
-archetype = "chapter"
+categories = "html"
+disableToc = true
 title = "Html"
-weight = 1
-+++
+weight = 30
 
++++
