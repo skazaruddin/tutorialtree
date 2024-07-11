@@ -32,3 +32,6 @@
 
 # Ignore OS-specific files
 Thumbs.db
+
+
+.idea
