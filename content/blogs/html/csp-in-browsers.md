@@ -99,9 +99,11 @@ To test the CSP by removing the 'unsafe-inline' from the style-src directive, we
 
 In this example, the CSP does not include 'unsafe-inline' in the style-src directive. As a result, the inline styles should not be applied, and the font styling for the body should not be loaded.
 
-### Screenshot of CSP Test
+### Result of CSP Test
 
 The following screenshot demonstrates the effect of removing `'unsafe-inline'` from the `style-src` directive. As expected, the inline styles are not applied.
 
-![CSP Test Screenshot](/images/html/csp-in-broswers/csp-error.png)
+**Preview** `images/html/csp-in-browsers/csp-error.png`:
+
+![CSP Test Screenshot](/images/html/csp-in-browsers/csp-error.png)
 
