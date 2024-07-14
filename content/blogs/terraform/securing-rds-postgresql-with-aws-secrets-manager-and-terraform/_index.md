@@ -1,11 +1,11 @@
 +++
-categories = "blogs"
+categories = "terraform"
+disableToc = true
 title = "Securing RDS PostgreSQL with AWS Secrets Manager and Terraform"
-weight = 4  
-author = "Azaruddin"
+weight = 20
 tags = ["AWS", "Terraform", "RDS", "Secrets Manager", "PostgreSQL"]
-+++
 
++++
 
 In this guide, we will explore how to securely manage PostgreSQL database credentials using AWS Secrets Manager when setting up an RDS PostgreSQL instance with Terraform. By storing credentials in Secrets Manager, we can enhance the security of our infrastructure.
 
